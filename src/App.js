@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import "./App.css";
+import MovieRow from "./components/MovieRow";
 import Tmdb from "./Tmdb";
 
 function App() {
@@ -11,7 +13,15 @@ function App() {
 
     loadAll();
   }, []);
-  return <div></div>;
+  return (
+    <div className="page">
+      <section className="lists">
+        {movieList.map((item, key) => (
+          <MovieRow key={key} title={item.title} items={item.items} />
+        ))}
+      </section>
+    </div>
+  );
 }
 
 export default App;
