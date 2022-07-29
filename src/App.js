@@ -18,6 +18,8 @@ function App() {
       );
       let chosen = originals[0].items.results[randomChosen];
       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, "tv");
+      setFeatureData(chosenInfo);
+      console.log(chosenInfo);
     };
 
     loadAll();
