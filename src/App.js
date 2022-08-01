@@ -50,6 +50,14 @@ function App() {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+      <footer>
+        Feito com{" "}
+        <span role="img" arial-label="coração">
+          ❤️
+        </span>
+        <br />
+        Dados pegos do site Themoviedb.org
+      </footer>
     </div>
   );
 }
