@@ -9,7 +9,6 @@ const FeatureMovie = ({ item }) => {
     genres.push(item.genres[i].name);
   }
 
-  console.log(item);
   return (
     <section
       className="featured"
