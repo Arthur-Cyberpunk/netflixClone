@@ -1,3 +1,5 @@
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import React from "react";
 import "./MovieRow.css";
 
@@ -5,6 +7,14 @@ const MovieRow = ({ title, items }) => {
   return (
     <div className="movieRow">
       <h2>{title}</h2>
+
+      <div className="movieRow--left">
+        <NavigateBeforeIcon />
+      </div>
+
+      <div className="movieRow--right">
+        <NavigateNextIcon />
+      </div>
       <div className="movieRow--listarea">
         <div className="movieRow--list">
           {items.results.length > 0 &&
